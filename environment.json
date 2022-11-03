@@ -1,0 +1,10 @@
+{
+	"URLbase": "ejbca/ejbca-rest-api",
+	"scheme": "https",
+	"host": "192.168.40.132",
+	"token":"",
+	"certPath":"/home/jdk/superadmin-ejdca.pem",
+	"keyPath":"/home/jdk/superadmin-ejdca.key",
+	"ca":"myCA",
+	"profile":"myProfile"
+}
