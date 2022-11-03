@@ -2,7 +2,7 @@
 	"URLbase": "ejbca/ejbca-rest-api",
 	"scheme": "https",
 	"host": "192.168.40.132",
-	"token":"",
+	"token":"x",
 	"certPath":"/home/jdk/superadmin-ejdca.pem",
 	"keyPath":"/home/jdk/superadmin-ejdca.key",
 	"ca":"myCA",
