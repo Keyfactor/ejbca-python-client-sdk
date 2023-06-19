@@ -6,5 +6,6 @@
 	"certPath":"/home/jdk/superadmin-ejdca.pem",
 	"keyPath":"/home/jdk/superadmin-ejdca.key",
 	"ca":"myCA",
-	"profile":"myProfile"
+	"certificate_profile":"myProfile",
+	"end_entity_profile":"myProfile"
 }

@@ -11,14 +11,14 @@ import ejbcaclient
 import cryptoOps
 import random
 
-def addEndEntity(username,password,subject,ca,profile):
-  ejbcaclient.add({"username": username,"password": password,"subject_dn": subject,"ca_name": ca,"certificate_profile_name": "ENDUSER","end_entity_profile_name": profile,"token": "USERGENERATED","account_binding_id": "1234567890"})
+def addEndEntity(username,password,subject,ca,certificate_profile,end_entity_profile):
+  ejbcaclient.add({"username": username,"password": password,"subject_dn": subject,"ca_name": ca,"certificate_profile_name": certificate_profile,"end_entity_profile_name": end_entity_profile,"token": "USERGENERATED","account_binding_id": "1234567890"})
 
 def csrEnrollment(subject):
   csr,key = cryptoOps.createCSR(subject)
   username = f'python_client_{random.randrange(100000000,1000000000)}'
   password = f'python_client_{random.randrange(100000000,1000000000)}_{random.randrange(100000000,1000000000)}'
-  addEndEntity(username,password,subject,ejbcaclient.config["ca"],ejbcaclient.config["profile"])
+  addEndEntity(username,password,subject,ejbcaclient.config["ca"],ejbcaclient.config["certificate_profile"],ejbcaclient.config["end_entity_profile"])
   cert = ejbcaclient.certificate_request({"certificate_request":csr,"username":username,"password":password})
   return cert["certificate"],key
 
