@@ -22,7 +22,8 @@ The environment.json file contains information needed by the client SDK to acces
 - certPath: file path to EJBCA client authentication certificate
 - keyPath: file path to private key for EJBCA client authentication certificate
 - ca: default CA to use for enrollment requests in highest-level scenarios wrapper
-- profile: default end entity ptofile to use for enrollment requests in highest-level scenarios wrapper
+- certificate_profile: default certificate profile to use for enrollment requests in highest-level scenarios wrapper
+- end_entity_profile: default end entity profile to use for enrollment requests in highest-level scenarios wrapper
 
 
 # Example usage:
